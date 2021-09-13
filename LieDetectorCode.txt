@@ -1,0 +1,24 @@
+void setup()
+void loop()
+{
+  Serial.begin(9600);                                    // Baud Rate for Serial Communication
+
+  pinMode(2, OUTPUT);                              // Digital Pin 2 as Output Pin for LED
+
+  pinMode(3, OUTPUT);                              // Digital Pin 3 as Output Pin for LED
+
+  pinMode(4, OUTPUT);                              // Digital Pin 4 as Output Pin for LED
+
+ 
+Serial.print(",");
+Serial.print(analogRead(A3)); // Read Pulse sensor value
+Serial.print(",");
+Serial.print(",");
+Serial.println(analogRead(A2)); // Read Breath rate
+digitalWrite(2, HIGH);                                // Pin 2 is High for Red LED
+delay(500);                                                // Hold By 5 ms
+digitalWrite(3, HIGH);                               // Pin 3 is High for Green LED
+delay(1000);              
+
+}  
+}
